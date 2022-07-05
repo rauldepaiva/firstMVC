@@ -1,0 +1,27 @@
+@model List<ItemPedido>
+
+    <h2>Listagem de pedidos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Valor unitário</th>
+                <th>Quantidade</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach(ItemPedido item in Model)
+            {
+                <tr>
+                    <td>@item.Descricao</td>
+                    <td>@item.Valor_unitario</td>
+                    <td>@item.Quantidade</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <p>Total de @Dados.PedidoAtual.TotalPedido()</p>
+
+    <p><a asp-action="Cadastro">Incluir mais itens</a></p>

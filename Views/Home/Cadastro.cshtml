@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+@model ItemPedido;
+
+<form method="POST">
+    <p>
+        <label asp-for="Descricao">Descrição:</label>
+        <input asp-for="Descricao" />
+    </p>
+    <p>
+        <label asp-for="Valor_unitario">Valor unitário:</label>
+        <input asp-for="Valor_unitario" />
+    </p>
+    <p>
+        <label asp-for="Quantidade">Quantidade:</label>
+        <input asp-for="Quantidade" />
+    </p>
+
+    <input type="submit" value="Cadastrar" />
+</form>
